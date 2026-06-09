@@ -1303,103 +1303,241 @@
     transform: translateY(0)
   }
 }
+
 /* ══════════════════════════════════════════
    RESPONSIVE FIXES — Mobile & Tablet
 ══════════════════════════════════════════ */
 
 /* Tablet (≤768px) */
 @media (max-width: 768px) {
+
   /* About page */
-  .directorCard { grid-template-columns: 1fr; }
-  .valueBand    { grid-template-columns: 1fr 1fr; }
+  .directorCard {
+    grid-template-columns: 1fr;
+  }
+
+  .valueBand {
+    grid-template-columns: 1fr 1fr;
+  }
 
   /* Fees table scroll */
-  .feesWrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .feesWrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 
   /* Syllabus tabs wrap */
-  .sylTab { gap: 4px; }
-  .sylTabBtn { padding: 8px 14px; font-size: 13px; }
-  .phaseHead  { flex-wrap: wrap; }
+  .sylTab {
+    gap: 4px;
+  }
+
+  .sylTabBtn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .phaseHead {
+    flex-wrap: wrap;
+  }
 
   /* Contact grid */
-  .grid2 { grid-template-columns: 1fr; }
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
 
   /* Course cards */
-  .grid2[style*="gap:28px"] { grid-template-columns: 1fr; }
+  .grid2[style*="gap:28px"] {
+    grid-template-columns: 1fr;
+  }
 
   /* Login page */
-  .loginBox { padding: 28px 18px 24px; }
+  .loginBox {
+    padding: 28px 18px 24px;
+  }
 }
 
 /* Mobile (≤480px) */
 @media (max-width: 480px) {
+
   /* Typography scale down */
-  .hero h1 { font-size: clamp(24px, 7.5vw, 34px); }
-  .pageHero h1 { font-size: clamp(22px, 6vw, 32px); }
+  .hero h1 {
+    font-size: clamp(24px, 7.5vw, 34px);
+  }
+
+  .pageHero h1 {
+    font-size: clamp(22px, 6vw, 32px);
+  }
 
   /* Hero CTA buttons stack */
-  .heroCtas { flex-direction: column; }
-  .heroCtas .btn { width: 100%; justify-content: center; }
+  .heroCtas {
+    flex-direction: column;
+  }
+
+  .heroCtas .btn {
+    width: 100%;
+    justify-content: center;
+  }
 
   /* Value band single col */
-  .valueBand { grid-template-columns: 1fr; }
+  .valueBand {
+    grid-template-columns: 1fr;
+  }
 
   /* CTA band */
-  .ctaBand { padding: 28px 16px; border-radius: 16px; }
-  .ctaBtns { flex-direction: column; }
-  .ctaBtns .btn { width: 100%; justify-content: center; }
+  .ctaBand {
+    padding: 28px 16px;
+    border-radius: 16px;
+  }
+
+  .ctaBtns {
+    flex-direction: column;
+  }
+
+  .ctaBtns .btn {
+    width: 100%;
+    justify-content: center;
+  }
 
   /* Step items */
-  .stepItem { padding: 16px; gap: 12px; }
-  .badge { width: 30px; height: 30px; font-size: 14px; }
+  .stepItem {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .badge {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
 
   /* Cards */
-  .card { padding: 20px; }
-  .courseBody { padding: 18px 16px; }
-  .courseHeader { padding: 18px 16px; }
-  .phaseHead { padding: 14px 16px; }
-  .phaseBody { padding: 14px 16px; }
+  .card {
+    padding: 20px;
+  }
+
+  .courseBody {
+    padding: 18px 16px;
+  }
+
+  .courseHeader {
+    padding: 18px 16px;
+  }
+
+  .phaseHead {
+    padding: 14px 16px;
+  }
+
+  .phaseBody {
+    padding: 14px 16px;
+  }
 
   /* Country chips wrap */
-  .countriesGrid { gap: 8px; }
-  .countryChip   { padding: 6px 12px; font-size: 13px; }
+  .countriesGrid {
+    gap: 8px;
+  }
+
+  .countryChip {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
 
   /* Book cards */
-  .bookCard      { flex-direction: column; }
-  .bookSpine     { width: 100%; height: 6px; }
-  .bookContent   { padding: 16px; }
+  .bookCard {
+    flex-direction: column;
+  }
+
+  .bookSpine {
+    width: 100%;
+    height: 6px;
+  }
+
+  .bookContent {
+    padding: 16px;
+  }
 
   /* Director card */
-  .avatarBox { padding: 24px 16px; }
+  .avatarBox {
+    padding: 24px 16px;
+  }
 
   /* FAQ */
-  .faqQ { padding: 14px 16px; font-size: 14px; }
-  .faqA { padding: 0 16px 14px; }
+  .faqQ {
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+
+  .faqA {
+    padding: 0 16px 14px;
+  }
 
   /* Fees table */
-  .feesTable th, .feesTable td { padding: 10px 10px; font-size: 12px; }
-  .feesTable .price { font-size: 13px; }
+  .feesTable th,
+  .feesTable td {
+    padding: 10px 10px;
+    font-size: 12px;
+  }
+
+  .feesTable .price {
+    font-size: 13px;
+  }
 
   /* Footer */
-  .footerGrid { grid-template-columns: 1fr; }
-  footer { padding: 40px 0 20px; }
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    padding: 40px 0 20px;
+  }
 
   /* Modal */
-  .modal { max-height: 95vh; }
-  .formRow { grid-template-columns: 1fr; }
+  .modal {
+    max-height: 95vh;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
 
   /* Login page */
-  .loginBox { padding: 24px 16px 20px; }
-  .roleCard  { padding: 14px; }
-  .roleIcon  { width: 42px; height: 42px; font-size: 20px; }
-  .roleInfo h3 { font-size: 15px; }
-  .roleInfo p  { font-size: 12px; }
+  .loginBox {
+    padding: 24px 16px 20px;
+  }
+
+  .roleCard {
+    padding: 14px;
+  }
+
+  .roleIcon {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+  }
+
+  .roleInfo h3 {
+    font-size: 15px;
+  }
+
+  .roleInfo p {
+    font-size: 12px;
+  }
 }
 
 /* Very small (≤360px) */
 @media (max-width: 360px) {
-  .wrap { padding: 0 12px; }
-  .brandName { font-size: 12px; }
-  .brandTag  { display: none; }
-  .hero h1   { font-size: 22px; }
+  .wrap {
+    padding: 0 12px;
+  }
+
+  .brandName {
+    font-size: 12px;
+  }
+
+  .brandTag {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+  }
 }

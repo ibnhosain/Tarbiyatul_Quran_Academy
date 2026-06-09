@@ -23,8 +23,8 @@ function setActiveNav() {
 /* ── Mobile menu ── */
 function initMobileMenu() {
   const hamburger = document.getElementById("hamburger");
-  const menu      = document.getElementById("menu");
-  const topbar    = document.querySelector(".topbar");
+  const menu = document.getElementById("menu");
+  const topbar = document.querySelector(".topbar");
   if (!hamburger || !menu) return;
 
   /* Set --header-h so the menu starts exactly below the header */
@@ -232,7 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
 /* ── Language dropdown ── */
 function initLangDrop() {
   const drop = document.getElementById("langDrop");
-  const btn  = document.getElementById("langBtn");
+  const btn = document.getElementById("langBtn");
   if (!drop || !btn) return;
 
   btn.addEventListener("click", e => {
