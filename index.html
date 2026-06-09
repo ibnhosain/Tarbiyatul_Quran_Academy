@@ -14,15 +14,15 @@
     content="online Quran classes, Quran teacher, Tajweed, Quran for kids, Islamic education, Noorani Qaida, Hifz, Muslim families abroad, online Quran tutor UK, online Quran USA, online Quran Canada" />
   <meta name="author" content="Tarbiyatul Quran Academy" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-  <link rel="canonical" href="https://tarbiyatulquranacademy.com/" />
+  <link rel="canonical" href="https://tarbiyatulquran.org/" />
 
   <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://tarbiyatulquranacademy.com/" />
+  <meta property="og:url" content="https://tarbiyatulquran.org/" />
   <meta property="og:title" content="Tarbiyatul Quran Academy — Online Quran Classes for Families Abroad" />
   <meta property="og:description"
     content="Structured 1-to-1 online Quran classes with certified Tajweed, Islamic manners and character building for Muslim families in USA, UK, Canada, Europe and Australia. Book a free trial today." />
-  <meta property="og:image" content="https://tarbiyatulquranacademy.com/images/og-image.svg" />
+  <meta property="og:image" content="https://tarbiyatulquran.org/images/og-image.svg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="Tarbiyatul Quran Academy" />
@@ -33,7 +33,7 @@
   <meta name="twitter:title" content="Tarbiyatul Quran Academy — Online Quran Classes for Families Abroad" />
   <meta name="twitter:description"
     content="Structured 1-to-1 online Quran classes with certified Tajweed, Islamic manners and character building for Muslim families in USA, UK, Canada, Europe and Australia. Book a free trial today." />
-  <meta name="twitter:image" content="https://tarbiyatulquranacademy.com/images/og-image.svg" />
+  <meta name="twitter:image" content="https://tarbiyatulquran.org/images/og-image.svg" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -48,10 +48,10 @@
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Tarbiyatul Quran Academy",
-      "url": "https://tarbiyatulquranacademy.com",
+      "url": "https://tarbiyatulquran.org",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://tarbiyatulquranacademy.com/?q={search_term_string}",
+        "target": "https://tarbiyatulquran.org/?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     }
@@ -61,8 +61,8 @@
       "@context": "https://schema.org",
       "@type": "EducationalOrganization",
       "name": "Tarbiyatul Quran Academy",
-      "url": "https://tarbiyatulquranacademy.com",
-      "logo": "https://tarbiyatulquranacademy.com/images/og-image.svg",
+      "url": "https://tarbiyatulquran.org",
+      "logo": "https://tarbiyatulquran.org/images/og-image.svg",
       "description": "Online Quran classes with Tajweed, character building and Islamic education for Muslim families abroad.",
       "telephone": "+8801402499027",
       "email": "ibnhosain014@gmail.com",
@@ -121,6 +121,23 @@
           WhatsApp
         </button>
         <button class="btn primary" data-open-modal style="margin-left:4px;">Get Admission</button>
+        <!-- Language switcher -->
+        <div class="langDrop" id="langDrop">
+          <button class="langBtn" id="langBtn" aria-label="Select language">
+            <span>🌐</span>
+            <span id="langLabel">EN</span>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="langMenu" id="langMenu">
+            <a href="index.html" class="active"><span class="langFlag">🇬🇧</span> English</a>
+            <a href="bn/index.html"><span class="langFlag">🇧🇩</span> বাংলা</a>
+          </div>
+        </div>
+        <!-- Login -->
+        <a href="login.html" class="loginBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          Login
+        </a>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Open menu"><svg width="20" height="20" viewBox="0 0 20 20"
           fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -657,18 +674,9 @@
             <textarea name="message" rows="3" placeholder="Any special requirements or questions?"></textarea>
           </div>
           <div style="display:flex;gap:10px;">
-            <button class="btn btnWa" type="submit" style="flex:1;">
-              <span class="btnIcon">
-                <svg viewBox="0 0 32 32" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                  <path fill="currentColor"
-                    d="M19.11 17.29c-.25-.12-1.47-.72-1.7-.8-.23-.08-.4-.12-.57.12-.17.25-.65.8-.8.96-.15.17-.3.19-.55.06-.25-.12-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.76-.15-.25-.02-.39.11-.52.11-.11.25-.3.37-.45.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.57-1.38-.78-1.9-.2-.48-.41-.42-.57-.43h-.49c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.45 1.02 2.62c.12.17 1.77 2.7 4.28 3.79.6.26 1.07.41 1.43.52.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.17.21-.57.21-1.06.15-1.17-.06-.11-.23-.17-.48-.3z" />
-                  <path fill="currentColor"
-                    d="M26.69 5.31C23.88 2.5 20.14.95 16.17.95 8.3.95 1.9 7.35 1.9 15.22c0 2.51.65 4.96 1.89 7.13L1.8 31.05l8.9-1.96c2.06 1.12 4.38 1.71 6.74 1.71h.01c7.87 0 14.27-6.4 14.27-14.27 0-3.97-1.55-7.71-4.36-10.22zM16.17 28.4h-.01c-2.12 0-4.2-.57-6.01-1.64l-.43-.26-5.28 1.16 1.13-5.15-.28-.53c-1.19-1.9-1.82-4.1-1.82-6.36 0-6.55 5.33-11.88 11.9-11.88 3.18 0 6.17 1.24 8.41 3.48 2.24 2.24 3.48 5.23 3.48 8.41 0 6.55-5.33 11.87-11.9 11.87z" />
-                </svg>
-              </span>
-              Send via WhatsApp
-            </button>
+            <button class="btn" type="reset">Reset</button>
             <button class="btn" type="button" data-close-modal>Cancel</button>
+            <button class="btn primary" type="submit" style="flex:1;">Submit</button>
           </div>
           <p class="formNote">Your details will be pre-filled in WhatsApp for fast confirmation.</p>
         </form>
