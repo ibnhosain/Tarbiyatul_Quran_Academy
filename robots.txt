@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tarbiyatulquranacademy.com/sitemap.xml
+Sitemap: https://tarbiyatulquran.org/sitemap.xml
