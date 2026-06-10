@@ -34,6 +34,9 @@ function initMobileMenu() {
   }
   setHeaderHeight();
   window.addEventListener("resize", setHeaderHeight);
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener("resize", setHeaderHeight);
+  }
 
   /* Hamburger toggle */
   hamburger.addEventListener("click", () => {

@@ -76,6 +76,7 @@
 
   <link rel="stylesheet" href="./css/min.css" />
   <link rel="stylesheet" href="./css/style.css" />
+
 </head>
 
 <body>
@@ -109,7 +110,7 @@
         <a href="demo.html">Demo Class</a>
         <a href="fees.html">Fees</a>
         <a href="contact.html">Contact</a>
-        <button class="btn btnWa" data-wa aria-label="Chat on WhatsApp" style="margin-left:4px;">
+        <button class="btn btnWa ml-4" data-wa aria-label="Chat on WhatsApp">
           <span class="btnIcon">
             <svg viewBox="0 0 32 32" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
               <path fill="currentColor"
@@ -120,11 +121,16 @@
           </span>
           WhatsApp
         </button>
-        <button class="btn primary" data-open-modal style="margin-left:4px;">Get Admission</button>
+        <button class="btn primary ml-4" data-open-modal>Get Admission</button>
         <!-- Language switcher -->
         <div class="langDrop" id="langDrop">
           <button class="langBtn" id="langBtn" aria-label="Select language">
-            <span>🌐</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path
+                d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
             <span id="langLabel">EN</span>
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
               <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
@@ -132,8 +138,19 @@
             </svg>
           </button>
           <div class="langMenu" id="langMenu">
-            <a href="index.html" class="active"><span class="langFlag">🇬🇧</span> English</a>
-            <a href="bn/index.html"><span class="langFlag">🇧🇩</span> বাংলা</a>
+            <a href="index.html" class="active"><svg width="20" height="15" class="langFlag" viewBox="0 0 20 15"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect width="20" height="15" fill="#012169" />
+                <path d="M0,0 L20,15 M20,0 L0,15" stroke="#fff" stroke-width="3" />
+                <path d="M0,0 L20,15 M20,0 L0,15" stroke="#C8102E" stroke-width="2" />
+                <path d="M10,0 V15 M0,7.5 H20" stroke="#fff" stroke-width="5" />
+                <path d="M10,0 V15 M0,7.5 H20" stroke="#C8102E" stroke-width="3" />
+              </svg> English</a>
+            <a href="bn/index.html"><svg width="20" height="15" class="langFlag" viewBox="0 0 20 15"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect width="20" height="15" fill="#006A4E" />
+                <circle cx="9" cy="7.5" r="4.5" fill="#F42A41" />
+              </svg> বাংলা</a>
           </div>
         </div>
         <!-- Login -->
@@ -180,10 +197,36 @@
           <li><span class="ck">✔</span> Weekly progress reports shared with parents</li>
           <li><span class="ck">✔</span> Flexible scheduling across all global time zones</li>
         </ul>
-
+        <!-- Right — stats -->
+        <div class="heroRight">
+          <div class="statCard">
+            <div class="statIcon">📖</div>
+            <b>5+</b>
+            <span>Years Teaching</span>
+            <small>Kids &amp; adults</small>
+          </div>
+          <div class="statCard">
+            <div class="statIcon">🎓</div>
+            <b>1-to-1</b>
+            <span>Personal Classes</span>
+            <small>Full attention</small>
+          </div>
+          <div class="statCard">
+            <div class="statIcon">🌍</div>
+            <b>15+</b>
+            <span>Countries Served</span>
+            <small>Global reach</small>
+          </div>
+          <div class="statCard">
+            <div class="statIcon">📊</div>
+            <b>Weekly</b>
+            <span>Progress Updates</span>
+            <small>For parents</small>
+          </div>
+        </div>
         <div class="heroCtas">
           <button class="btn gold lg" data-open-modal>Book Free Trial Class</button>
-          <button class="btn lg" data-wa style="background:#25d366;border-color:#25d366;color:#fff;">
+          <button class="btn lg btn-wa-green" data-wa>
             <span class="btnIcon">
               <svg viewBox="0 0 32 32" width="17" height="17" xmlns="http://www.w3.org/2000/svg">
                 <path fill="currentColor"
@@ -195,60 +238,97 @@
             Chat on WhatsApp
           </button>
         </div>
-
         <div class="flagStrip">
           <span>Serving families in:</span>
           <div class="flags">
-            <span class="flag" title="USA">🇺🇸</span>
-            <span class="flag" title="Canada">🇨🇦</span>
-            <span class="flag" title="UK">🇬🇧</span>
-            <span class="flag" title="Germany">🇩🇪</span>
-            <span class="flag" title="France">🇫🇷</span>
-            <span class="flag" title="Italy">🇮🇹</span>
-            <span class="flag" title="Spain">🇪🇸</span>
-            <span class="flag" title="Netherlands">🇳🇱</span>
-            <span class="flag" title="Australia">🇦🇺</span>
-            <span class="flag" title="More">+ more</span>
+            <span class="flag" title="USA"><svg width="20" height="14" viewBox="0 0 20 14"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect width="20" height="14" fill="#B22234" />
+                <rect y="1.08" width="20" height="1.08" fill="#fff" />
+                <rect y="2.15" width="20" height="1.08" fill="#B22234" />
+                <rect y="3.23" width="20" height="1.08" fill="#fff" />
+                <rect y="4.31" width="20" height="1.08" fill="#B22234" />
+                <rect y="5.38" width="20" height="1.08" fill="#fff" />
+                <rect y="6.46" width="20" height="1.08" fill="#B22234" />
+                <rect y="7.54" width="20" height="1.08" fill="#fff" />
+                <rect y="8.62" width="20" height="1.08" fill="#B22234" />
+                <rect y="9.69" width="20" height="1.08" fill="#fff" />
+                <rect y="10.77" width="20" height="1.08" fill="#B22234" />
+                <rect y="11.85" width="20" height="1.08" fill="#fff" />
+                <rect y="12.92" width="20" height="1.08" fill="#B22234" />
+                <rect width="8" height="7.54" fill="#3C3B6E" />
+              </svg></span>
+            <span class="flag" title="Canada"><svg width="20" height="14" viewBox="0 0 20 14"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect width="5" height="14" fill="#FF0000" />
+                <rect x="15" width="5" height="14" fill="#FF0000" />
+                <rect x="5" width="10" height="14" fill="#fff" />
+                <path d="M10,2.5 L11,6 L14,6 L11.5,8 L12.5,11.5 L10,9.5 L7.5,11.5 L8.5,8 L6,6 L9,6 Z" fill="#FF0000" />
+              </svg></span>
+            <span class="flag" title="UK"><svg width="20" height="14" viewBox="0 0 20 14"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect width="20" height="14" fill="#012169" />
+                <path d="M0,0 L20,14 M20,0 L0,14" stroke="#fff" stroke-width="3" />
+                <path d="M0,0 L20,14 M20,0 L0,14" stroke="#C8102E" stroke-width="1.8" />
+                <path d="M10,0 V14 M0,7 H20" stroke="#fff" stroke-width="5" />
+                <path d="M10,0 V14 M0,7 H20" stroke="#C8102E" stroke-width="3" />
+              </svg></span>
+            <span class="flag" title="Germany"><svg width="20" height="14" viewBox="0 0 20 14"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect width="20" height="4.67" fill="#000" />
+                <rect y="4.67" width="20" height="4.67" fill="#DD0000" />
+                <rect y="9.33" width="20" height="4.67" fill="#FFCE00" />
+              </svg></span>
+            <span class="flag" title="France"><svg width="20" height="14" viewBox="0 0 20 14"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect width="20" height="14" fill="#fff" />
+                <rect width="6.67" height="14" fill="#002395" />
+                <rect x="13.33" width="6.67" height="14" fill="#ED2939" />
+              </svg></span>
+            <span class="flag" title="Italy"><svg width="20" height="14" viewBox="0 0 20 14"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect width="20" height="14" fill="#fff" />
+                <rect width="6.67" height="14" fill="#009246" />
+                <rect x="13.33" width="6.67" height="14" fill="#CE2B37" />
+              </svg></span>
+            <span class="flag" title="Spain"><svg width="20" height="14" viewBox="0 0 20 14"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect width="20" height="14" fill="#AA151B" />
+                <rect y="3.5" width="20" height="7" fill="#F1BF00" />
+              </svg></span>
+            <span class="flag" title="Netherlands"><svg width="20" height="14" viewBox="0 0 20 14"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect width="20" height="4.67" fill="#AE1C28" />
+                <rect y="4.67" width="20" height="4.67" fill="#fff" />
+                <rect y="9.33" width="20" height="4.67" fill="#21468B" />
+              </svg></span>
+            <span class="flag" title="Australia"><svg width="20" height="14" viewBox="0 0 20 14"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect width="20" height="14" fill="#00008B" />
+                <path d="M0,0 L10,7 M10,0 L0,7" stroke="#fff" stroke-width="2.5" />
+                <path d="M0,0 L10,7 M10,0 L0,7" stroke="#C8102E" stroke-width="1.5" />
+                <path d="M5,0 V7 M0,3.5 H10" stroke="#fff" stroke-width="4" />
+                <path d="M5,0 V7 M0,3.5 H10" stroke="#C8102E" stroke-width="2.5" />
+                <circle cx="15" cy="10.5" r="1.4" fill="#fff" />
+                <circle cx="13" cy="7.5" r="0.9" fill="#fff" />
+                <circle cx="17" cy="7.5" r="0.9" fill="#fff" />
+                <circle cx="13" cy="12" r="0.9" fill="#fff" />
+                <circle cx="17" cy="12" r="0.9" fill="#fff" />
+              </svg></span>
+            <span class="flag-more">+ more</span>
           </div>
         </div>
-      </div>
 
-      <!-- Right — stats -->
-      <div class="heroRight">
-        <div class="statCard">
-          <div class="statIcon">📖</div>
-          <b>5+</b>
-          <span>Years Teaching</span>
-          <small>Kids &amp; adults</small>
-        </div>
-        <div class="statCard">
-          <div class="statIcon">🎓</div>
-          <b>1-to-1</b>
-          <span>Personal Classes</span>
-          <small>Full attention</small>
-        </div>
-        <div class="statCard">
-          <div class="statIcon">🌍</div>
-          <b>15+</b>
-          <span>Countries Served</span>
-          <small>Global reach</small>
-        </div>
-        <div class="statCard">
-          <div class="statIcon">📊</div>
-          <b>Weekly</b>
-          <span>Progress Updates</span>
-          <small>For parents</small>
-        </div>
       </div>
     </div>
   </section>
 
   <!-- ═══════════════ QURAN VERSE BANNER ═══════════════ -->
-  <section class="section bg-alt" style="padding:40px 0;">
+  <section class="section bg-alt section-pt40">
     <div class="wrap text-center">
       <p class="tqaQuote">"The best among you are those who learn the Quran and teach it."</p>
       <p class="tqaQuoteArabic">— Sahih al-Bukhari</p>
-      <p style="font-size:14px;color:var(--muted);">This is the foundation of everything we do at Tarbiyatul Quran
+      <p class="fs-14-muted">This is the foundation of everything we do at Tarbiyatul Quran
         Academy.</p>
     </div>
   </section>
@@ -389,13 +469,12 @@
             retention.</p>
           <a href="courses.html" class="courseArrow">Learn more →</a>
         </div>
-        <div class="coursePrev"
-          style="display:flex;align-items:center;justify-content:center;text-align:center;background:var(--emerald);border-color:var(--emerald);">
+        <div class="coursePrev btn-emerald-center">
           <div>
-            <p style="color:rgba(255,255,255,.8);margin-bottom:16px;font-size:15px;">Not sure which course to start
+            <p class="c-white80-mb16-fs15">Not sure which course to start
               with?</p>
             <button class="btn gold" data-open-modal>Book a Free Trial</button>
-            <p style="color:rgba(255,255,255,.55);font-size:12px;margin-top:12px;">We'll assess and recommend.</p>
+            <p class="c-white55-fs12-mt12">We'll assess and recommend.</p>
           </div>
         </div>
       </div>
@@ -411,7 +490,7 @@
         <p>Simple, straightforward and designed so families abroad can begin Quranic learning without any hassle.</p>
       </div>
 
-      <div style="max-width:680px;margin:0 auto;">
+      <div class="mw680-center">
         <div class="stepItem">
           <div class="badge">1</div>
           <div>
@@ -458,19 +537,71 @@
           your time zone.</p>
       </div>
       <div class="countriesGrid">
-        <div class="countryChip"><span class="flag">🇺🇸</span> United States</div>
-        <div class="countryChip"><span class="flag">🇨🇦</span> Canada</div>
-        <div class="countryChip"><span class="flag">🇬🇧</span> United Kingdom</div>
-        <div class="countryChip"><span class="flag">🇩🇪</span> Germany</div>
-        <div class="countryChip"><span class="flag">🇫🇷</span> France</div>
+        <div class="countryChip"><span class="flag"><svg class="flagSvg" viewBox="0 0 20 15"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect width="20" height="15" fill="#B22234" />
+              <rect y="1.15" width="20" height="1.15" fill="#fff" />
+              <rect y="2.3" width="20" height="1.15" fill="#B22234" />
+              <rect y="3.46" width="20" height="1.15" fill="#fff" />
+              <rect y="4.61" width="20" height="1.15" fill="#B22234" />
+              <rect y="5.77" width="20" height="1.15" fill="#fff" />
+              <rect y="6.92" width="20" height="1.15" fill="#B22234" />
+              <rect y="8.08" width="20" height="1.15" fill="#fff" />
+              <rect y="9.23" width="20" height="1.15" fill="#B22234" />
+              <rect y="10.38" width="20" height="1.15" fill="#fff" />
+              <rect y="11.54" width="20" height="1.15" fill="#B22234" />
+              <rect y="12.69" width="20" height="1.15" fill="#fff" />
+              <rect y="13.85" width="20" height="1.15" fill="#B22234" />
+              <rect width="8" height="8.08" fill="#3C3B6E" />
+            </svg></span> United States</div>
+        <div class="countryChip"><span class="flag"><svg class="flagSvg" viewBox="0 0 20 15"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect width="5" height="15" fill="#FF0000" />
+              <rect x="15" width="5" height="15" fill="#FF0000" />
+              <rect x="5" width="10" height="15" fill="#fff" />
+              <path d="M10,3 L11,6.5 L14.5,6.5 L11.7,8.5 L12.7,12 L10,10 L7.3,12 L8.3,8.5 L5.5,6.5 L9,6.5 Z"
+                fill="#FF0000" />
+            </svg></span> Canada</div>
+        <div class="countryChip"><span class="flag"><svg class="flagSvg" viewBox="0 0 20 15"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect width="20" height="15" fill="#012169" />
+              <path d="M0,0 L20,15 M20,0 L0,15" stroke="#fff" stroke-width="3" />
+              <path d="M0,0 L20,15 M20,0 L0,15" stroke="#C8102E" stroke-width="2" />
+              <path d="M10,0 V15 M0,7.5 H20" stroke="#fff" stroke-width="5" />
+              <path d="M10,0 V15 M0,7.5 H20" stroke="#C8102E" stroke-width="3" />
+            </svg></span> United Kingdom</div>
+        <div class="countryChip"><span class="flag"><svg class="flagSvg" viewBox="0 0 20 15"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect width="20" height="5" fill="#000" />
+              <rect y="5" width="20" height="5" fill="#DD0000" />
+              <rect y="10" width="20" height="5" fill="#FFCE00" />
+            </svg></span> Germany</div>
+        <div class="countryChip"><span class="flag"><svg class="flagSvg" viewBox="0 0 20 15"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect width="20" height="15" fill="#fff" />
+              <rect width="6.67" height="15" fill="#002395" />
+              <rect x="13.33" width="6.67" height="15" fill="#ED2939" />
+            </svg></span> France</div>
         <div class="countryChip"><span class="flag">🇮🇹</span> Italy</div>
         <div class="countryChip"><span class="flag">🇳🇱</span> Netherlands</div>
         <div class="countryChip"><span class="flag">🇧🇪</span> Belgium</div>
-        <div class="countryChip"><span class="flag">🇦🇺</span> Australia</div>
+        <div class="countryChip"><span class="flag"><svg class="flagSvg" viewBox="0 0 20 15"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect width="20" height="15" fill="#00008B" />
+              <path d="M0,0 L10,7.5 M10,0 L0,7.5" stroke="#fff" stroke-width="2.5" />
+              <path d="M0,0 L10,7.5 M10,0 L0,7.5" stroke="#C8102E" stroke-width="1.5" />
+              <path d="M5,0 V7.5 M0,3.75 H10" stroke="#fff" stroke-width="4" />
+              <path d="M5,0 V7.5 M0,3.75 H10" stroke="#C8102E" stroke-width="2.5" />
+              <circle cx="15" cy="11" r="1.5" fill="#fff" />
+              <circle cx="13" cy="8" r="1" fill="#fff" />
+              <circle cx="17" cy="8" r="1" fill="#fff" />
+              <circle cx="13" cy="13" r="1" fill="#fff" />
+              <circle cx="17" cy="13" r="1" fill="#fff" />
+            </svg></span> Australia</div>
         <div class="countryChip"><span class="flag">🇸🇪</span> Sweden</div>
         <div class="countryChip"><span class="flag">🇦🇹</span> Austria</div>
         <div class="countryChip"><span class="flag">🇪🇸</span> Spain</div>
-        <div class="countryChip" style="background:var(--emerald);color:#fff;border-color:var(--emerald);">🌍 &amp; more
+        <div class="countryChip chip-emerald">🌍 &amp; more
           worldwide</div>
       </div>
     </div>
@@ -493,7 +624,13 @@
             <div class="avatar">S</div>
             <div>
               <div class="authorName">Sister Sumaiya</div>
-              <div class="authorSub">🇬🇧 United Kingdom</div>
+              <div class="authorSub"><svg class="flagSvg" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="20" height="15" fill="#012169" />
+                  <path d="M0,0 L20,15 M20,0 L0,15" stroke="#fff" stroke-width="3" />
+                  <path d="M0,0 L20,15 M20,0 L0,15" stroke="#C8102E" stroke-width="2" />
+                  <path d="M10,0 V15 M0,7.5 H20" stroke="#fff" stroke-width="5" />
+                  <path d="M10,0 V15 M0,7.5 H20" stroke="#C8102E" stroke-width="3" />
+                </svg> United Kingdom</div>
             </div>
           </div>
         </div>
@@ -505,7 +642,22 @@
             <div class="avatar">A</div>
             <div>
               <div class="authorName">Brother Ahmed</div>
-              <div class="authorSub">🇺🇸 United States</div>
+              <div class="authorSub"><svg class="flagSvg" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="20" height="15" fill="#B22234" />
+                  <rect y="1.15" width="20" height="1.15" fill="#fff" />
+                  <rect y="2.3" width="20" height="1.15" fill="#B22234" />
+                  <rect y="3.46" width="20" height="1.15" fill="#fff" />
+                  <rect y="4.61" width="20" height="1.15" fill="#B22234" />
+                  <rect y="5.77" width="20" height="1.15" fill="#fff" />
+                  <rect y="6.92" width="20" height="1.15" fill="#B22234" />
+                  <rect y="8.08" width="20" height="1.15" fill="#fff" />
+                  <rect y="9.23" width="20" height="1.15" fill="#B22234" />
+                  <rect y="10.38" width="20" height="1.15" fill="#fff" />
+                  <rect y="11.54" width="20" height="1.15" fill="#B22234" />
+                  <rect y="12.69" width="20" height="1.15" fill="#fff" />
+                  <rect y="13.85" width="20" height="1.15" fill="#B22234" />
+                  <rect width="8" height="8.08" fill="#3C3B6E" />
+                </svg> United States</div>
             </div>
           </div>
         </div>
@@ -517,7 +669,13 @@
             <div class="avatar">F</div>
             <div>
               <div class="authorName">Sister Fatimah</div>
-              <div class="authorSub">🇨🇦 Canada</div>
+              <div class="authorSub"><svg class="flagSvg" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="5" height="15" fill="#FF0000" />
+                  <rect x="15" width="5" height="15" fill="#FF0000" />
+                  <rect x="5" width="10" height="15" fill="#fff" />
+                  <path d="M10,3 L11,6.5 L14.5,6.5 L11.7,8.5 L12.7,12 L10,10 L7.3,12 L8.3,8.5 L5.5,6.5 L9,6.5 Z"
+                    fill="#FF0000" />
+                </svg> Canada</div>
             </div>
           </div>
         </div>
@@ -526,7 +684,7 @@
   </section>
 
   <!-- ═══════════════ CTA BAND ═══════════════ -->
-  <section class="section" style="padding:0 0 72px;">
+  <section class="section section-pb72">
     <div class="wrap">
       <div class="ctaBand">
         <h2>Begin Your Child's Quran Journey Today</h2>
@@ -534,7 +692,7 @@
           InshaAllah.</p>
         <div class="ctaBtns">
           <button class="btn gold lg" data-open-modal>Book Free Trial Class</button>
-          <button class="btn lg" data-wa style="background:var(--wa);border-color:var(--wa);color:#fff;">
+          <button class="btn lg btn-wa" data-wa>
             <span class="btnIcon">
               <svg viewBox="0 0 32 32" width="17" height="17" xmlns="http://www.w3.org/2000/svg">
                 <path fill="currentColor"
@@ -545,8 +703,7 @@
             </span>
             Message on WhatsApp
           </button>
-          <a href="demo.html" class="btn lg outline" style="color:#fff;border-color:rgba(255, 255, 255, 0.4);">Watch
-            Demo
+          <a href="demo.html" class="btn lg outline btn-outline-white">Watch Demo
             Class</a>
         </div>
       </div>
@@ -558,8 +715,7 @@
     <div class="wrap">
       <div class="footerGrid">
         <div class="footerBrand">
-          <div class="logo"
-            style="width:44px;height:44px;border-radius:13px;background:rgba(255,255,255,.1);display:grid;place-items:center;margin-bottom:14px;">
+          <div class="logo icon-44-mb14">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
               <path d="M7.5 5.2c2.2-1.2 4.9-1.2 7.1 0v13.6c-2.2-1.2-4.9-1.2-7.1 0V5.2Z" stroke="#f0c355"
                 stroke-width="1.8" fill="none" />
@@ -569,7 +725,7 @@
                 stroke-linecap="round" fill="none" />
             </svg>
           </div>
-          <div style="font-weight:800;color:#fff;font-size:15px;margin-bottom:8px;">Tarbiyatul Quran Academy</div>
+          <div class="fw800-white-fs15-mb8">Tarbiyatul Quran Academy</div>
           <p>Structured Quranic education for Muslim families living in non-Muslim countries. Quality, care and correct
             teaching.</p>
         </div>
@@ -597,8 +753,8 @@
           <a href="https://wa.me/8801402499027" target="_blank">WhatsApp Us</a>
           <a href="mailto:ibnhosain014@gmail.com">ibnhosain014@gmail.com</a>
           <a href="demo.html">Watch Demo Class</a>
-          <div style="margin-top:16px;">
-            <button class="btn gold" data-open-modal style="font-size:13px;padding:9px 16px;">Book Free Trial</button>
+          <div class="mt-16">
+            <button class="btn gold btn-sm" data-open-modal>Book Free Trial</button>
           </div>
         </div>
       </div>
@@ -617,7 +773,7 @@
         <button class="btnClose" data-close-modal aria-label="Close">✕</button>
       </div>
       <div class="modalBody">
-        <p style="font-size:13.5px;color:var(--muted);margin-bottom:24px;">Fill in the details below and we will confirm
+        <p class="fs-135-muted-mb24">Fill in the details below and we will confirm
           your free trial class within 24 hours, InshaAllah. No payment required.</p>
         <form id="admissionForm">
           <div class="formRow">
@@ -677,13 +833,13 @@
             <input name="whatsapp" required placeholder="+1 (USA) / +44 (UK) / +1 (Canada)..." />
           </div>
           <div class="field">
-            <label>Additional Note <span style="color:var(--muted);font-weight:400;">(optional)</span></label>
+            <label>Additional Note <span class="c-muted-fw400">(optional)</span></label>
             <textarea name="message" rows="3" placeholder="Any special requirements or questions?"></textarea>
           </div>
-          <div style="display:flex;gap:10px;">
+          <div class="flex-gap10">
             <button class="btn" type="reset">Reset</button>
             <button class="btn" type="button" data-close-modal>Cancel</button>
-            <button class="btn primary" type="submit" style="flex:1;">Submit</button>
+            <button class="btn primary flex-1" type="submit">Submit</button>
           </div>
           <p class="formNote">Your details will be pre-filled in WhatsApp for fast confirmation.</p>
         </form>
