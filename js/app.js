@@ -92,58 +92,12 @@ function initModal() {
   document.addEventListener("keydown", e => { if (e.key === "Escape") close(); });
 }
 
-/* ── Admission form ── */
-function initAdmissionForm() {
-  const form = document.getElementById("admissionForm");
-  if (!form) return;
-  form.addEventListener("submit", e => {
-    e.preventDefault();
+/* ── Admission form: এখন forms.js সামলায় (backend-connected) ── */
+function initAdmissionForm() { /* forms.js এ স্থানান্তরিত */ }
 
-    // Hide form, show success inside modal
-    form.style.display = "none";
-    const success = document.createElement("div");
-    success.style.cssText = "text-align:center;padding:36px 20px;";
-    success.innerHTML = `
-      <div style="font-size:52px;margin-bottom:18px;">🤲</div>
-      <h3 style="font-family:'Playfair Display',serif;font-size:22px;font-weight:800;color:var(--emerald);margin-bottom:10px;direction:rtl;line-height:1.5;">
-        جَزَاكَ اللَّهُ خَيْرًا فِي الدَّارَيْنِ
-      </h3>
-      <p style="font-size:15px;color:var(--emerald);font-weight:700;margin-bottom:10px;">
-        الحمد لله — আপনার আবেদনটি সফলভাবে গৃহীত হয়েছে।
-      </p>
-      <p style="font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:22px;">
-        আমরা আপনার তথ্য পর্যালোচনা করে <strong>২৪ ঘণ্টার মধ্যে</strong> যোগাযোগ করব, ইনশাআল্লাহ।<br>
-        আল্লাহ আপনার পরিবারকে কুরআনের নূর দান করুন। 📖
-      </p>
-      <div style="background:#f2f7f4;border:1px solid rgba(26,92,58,.15);border-radius:12px;padding:14px 18px;font-size:15px;color:var(--emerald);font-weight:600;direction:rtl;margin-bottom:20px;">
-        ﴿ اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ ﴾
-      </div>
-      <button class="btn primary" id="successClose" style="min-width:140px;">Close</button>`;
-    form.parentNode.appendChild(success);
-
-    // Close button inside success
-    document.getElementById("successClose")?.addEventListener("click", () => {
-      closeModal();
-    });
-
-    function closeModal() {
-      const backdrop = document.getElementById("backdrop");
-      backdrop?.classList.remove("show");
-      document.body.style.overflow = "";
-      setTimeout(() => {
-        form.reset();
-        form.style.display = "";
-        success.remove();
-      }, 300);
-    }
-
-    // Auto-close after 6 seconds
-    setTimeout(closeModal, 6000);
-  });
-}
-
-/* ── Contact form ── */
-function initContactForm() {
+/* ── Contact form: এখন forms.js সামলায় (backend-connected) ── */
+function initContactForm() { /* forms.js এ স্থানান্তরিত — backend এ পাঠায় */ }
+function initContactForm_OLD_disabled() {
   const form = document.getElementById("contactForm");
   if (!form) return;
   form.addEventListener("submit", e => {
