@@ -1474,6 +1474,249 @@ footer {
     font-size: 12px;
   }
 }
+@media (max-width: 620px) {
+
+  /* Wrap */
+  .wrap {
+    padding: 5px 16px;
+  }
+
+  /* Sections */
+  .section {
+    padding: 44px 0;
+  }
+
+  .sectionTitle {
+    margin-bottom: 28px;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 40px 0 36px;
+  }
+
+  .hero h1 {
+    font-size: clamp(24px, 7.5vw, 36px);
+  }
+
+  .heroCtas {
+    flex-direction: column;
+  }
+
+  .heroCtas .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* heroRight mobile: 2×2 compact */
+  .heroRight {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .statCard {
+    padding: 14px 10px;
+  }
+
+  .statCard .statIcon {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+
+  .statCard b {
+    font-size: 18px;
+  }
+
+  .statCard span {
+    font-size: 11px;
+  }
+
+  .statCard small {
+    font-size: 10px;
+  }
+
+  /* Page hero */
+  .pageHero {
+    padding: 44px 0 36px;
+  }
+
+  .pageHero h1 {
+    font-size: clamp(22px, 6vw, 32px);
+  }
+
+  /* Cards */
+  .card {
+    padding: 20px;
+  }
+
+  .formCard {
+    padding: 20px 16px;
+  }
+
+  /* CTA band */
+  .ctaBand {
+    padding: 28px 16px;
+    border-radius: 16px;
+  }
+
+  .ctaBtns {
+    flex-direction: column;
+  }
+
+  .ctaBtns .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Step items */
+  .stepItem {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .badge {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  /* Modal */
+  .modal {
+    border-radius: var(--radius);
+    max-height: 95vh;
+  }
+
+  .modalBody {
+    padding: 18px 16px;
+  }
+
+  .modalHead {
+    padding: 18px 16px 16px;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    padding: 40px 0 20px;
+  }
+
+  /* Country chips */
+  .countriesGrid {
+    gap: 8px;
+  }
+
+  .countryChip {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  /* Books */
+  .bookCard {
+    flex-direction: column;
+  }
+
+  .bookSpine {
+    width: 100%;
+    height: 6px;
+  }
+
+  .bookContent {
+    padding: 16px;
+  }
+
+  .bookTitle {
+    font-size: 15px;
+  }
+
+  /* About */
+  .avatarBox {
+    padding: 24px 16px;
+  }
+
+  .valueBand {
+    grid-template-columns: 1fr;
+  }
+
+  /* FAQ */
+  .faqQ {
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+
+  .faqA {
+    padding: 0 16px 14px;
+  }
+
+  /* Fees */
+  .feesTable th,
+  .feesTable td {
+    padding: 9px 10px;
+    font-size: 12px;
+  }
+
+  .feesTable .price {
+    font-size: 13px;
+  }
+
+  /* Courses */
+  .courseHeader {
+    padding: 18px 16px;
+  }
+
+  .courseBody {
+    padding: 18px 16px;
+  }
+
+  /* Syllabus */
+  .sylTabBtn {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .phaseHead {
+    padding: 14px 16px;
+  }
+
+  .phaseBody {
+    padding: 14px 16px;
+  }
+
+  /* Demo */
+  .demoCard {
+    padding: 20px;
+  }
+
+  /* Login */
+  .loginBox {
+    padding: 24px 16px 20px;
+  }
+
+  .roleCard {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .roleIcon {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+  }
+
+  .roleInfo h3 {
+    font-size: 15px;
+  }
+
+  .roleInfo p {
+    font-size: 12px;
+  }
+}
 
 /* ── 400px: Brand overflow ── */
 @media (max-width: 400px) {
