@@ -1489,7 +1489,7 @@ footer {
 /* ── 360px: Very small ── */
 @media (max-width: 360px) {
   .wrap {
-    padding: 0 12px;
+    padding: 5px 12px;
   }
 
   .brandName {
