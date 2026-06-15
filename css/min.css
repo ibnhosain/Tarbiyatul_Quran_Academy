@@ -77,8 +77,9 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 13px 0;
+  padding: 10px 0;
   gap: 16px;
+  vertical-align: middle;
 }
 
 /* Brand */
@@ -964,12 +965,14 @@ footer {
 
 /* ── 980px: Hamburger menu ── */
 @media (max-width: 980px) {
+   .wrap {
+    padding: 5px 16px;
+  }
   .hamburger {
     display: flex;
     align-items: center;
     flex-shrink: 0;
   }
-
   .menu {
     display: none;
     position: fixed;
@@ -1232,7 +1235,7 @@ footer {
 
   /* Wrap */
   .wrap {
-    padding: 0 16px;
+    padding: 5px 16px;
   }
 
   /* Sections */
