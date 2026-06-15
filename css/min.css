@@ -108,12 +108,10 @@ button {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(240, 195, 85, .18) 0%, transparent 60%);
   border-radius: inherit;
 }
 
 .logo:hover {
-  box-shadow: 0 4px 18px rgba(26, 92, 58, .5), 0 0 0 2px rgba(240, 195, 85, .5);
   transform: translateY(-1px);
 }
 
