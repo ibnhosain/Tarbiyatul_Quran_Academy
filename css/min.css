@@ -63,14 +63,14 @@ button {
    TOPBAR / NAV
 ══════════════════════════════════════════ */
 .topbar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(255, 255, 255, .97);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--line);
-  box-shadow: 0 1px 8px rgba(0, 0, 0, .06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgb(255 254 254 / 45%);
+    backdrop-filter: blur(48px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, .06);
 }
 
 .nav {
@@ -90,17 +90,18 @@ button {
 }
 
 .logo {
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, var(--emerald-d) 0%, var(--emerald) 55%, var(--emerald-l) 100%);
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
-  box-shadow: 0 2px 12px rgba(26, 92, 58, .35), 0 0 0 2px rgba(240, 195, 85, .25);
-  transition: box-shadow .25s, transform .2s;
-  position: relative;
-  overflow: hidden;
+    width: 50px;
+    height: 48px;
+    padding: 5px;
+    border-radius: 10px;
+    /* background: linear-gradient(135deg, var(--emerald-d) 0%, var(--emerald) 55%, var(--emerald-l) 100%); */
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    box-shadow: 0 2px 12px rgba(26, 92, 58, .35), 0 0 0 2px rgba(240, 195, 85, .25);
+    transition: box-shadow .25s, transform .2s;
+    position: relative;
+    overflow: hidden;
 }
 
 .logo::after {
