@@ -92,9 +92,10 @@ button {
 .logo {
     width: 50px;
     height: 48px;
-    padding: 5px;
+    padding: 2px;
+    border: 3px solid var(--emerald-l);
+    background-color: var(--emerald-l);
     border-radius: 10px;
-    /* background: linear-gradient(135deg, var(--emerald-d) 0%, var(--emerald) 55%, var(--emerald-l) 100%); */
     display: grid;
     place-items: center;
     flex-shrink: 0;
@@ -103,7 +104,6 @@ button {
     position: relative;
     overflow: hidden;
 }
-
 .logo::after {
   content: '';
   position: absolute;

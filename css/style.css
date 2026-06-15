@@ -1284,14 +1284,15 @@
   margin-bottom: 28px;
 }
 
+
 .loginLogo .logo {
-  width: 52px;
-  height: 52px;
-  border-radius: 15px;
-  background: linear-gradient(135deg, var(--emerald-d), var(--emerald-l));
-  display: grid;
-  place-items: center;
-  box-shadow: 0 3px 12px rgba(26, 92, 58, .35);
+    width: 50px;
+    height: 48px;
+    padding: 2px;
+    border: 3px solid var(--emerald-l);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(26, 92, 58, .35), 0 0 0 2px rgba(240, 195, 85, .25);
+    transition: box-shadow .25s, transform .2s;
 }
 
 .loginLogo .logo svg {
