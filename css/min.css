@@ -139,7 +139,7 @@ button {
   position: relative;
   z-index: 2;
   transform: scale(1.22);
-  filter: drop-shadow(0 4px 5px rgba(0, 0, 0, .45));
+  filter: invert(1) drop-shadow(0 4px 5px rgba(0, 0, 0, .45));
   transition: transform .25s ease;
 }
 
