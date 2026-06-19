@@ -297,13 +297,13 @@ button {
 
 .btn.outline {
   background: transparent;
-  color: var(--emerald);
-  border-color: var(--emerald);
+  color:white;
+  border-color: white;
 }
 
 .btn.outline:hover {
-  background: var(--emerald);
-  color: #fff;
+    background: #05ff7e29;
+    color: #fff;
 }
 
 .btn.lg {
