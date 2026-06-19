@@ -21,7 +21,7 @@
     <a href="syllabus.html">সিলেবাস</a><a href="books.html">বই</a><a href="demo.html">ডেমো ক্লাস</a>
     <a href="fees.html">ফি</a><a href="contact.html">যোগাযোগ</a>
     <button class="btn btnWa" id="waNav">WhatsApp</button>
-    <button class="btn primary" id="openModal">ভর্তির আবেদন</button>
+    <button class="btn primary" data-enroll-modal>ভর্তির আবেদন</button>
     <div class="langDrop" id="langDrop">
       <button class="langBtn" id="langBtn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>বাংলা</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       <div class="langMenu"><a href="../contact.html"><svg width="20" height="15" class="langFlag" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="15" fill="#012169"/><path d="M0,0 L20,15 M20,0 L0,15" stroke="#fff" stroke-width="3"/><path d="M0,0 L20,15 M20,0 L0,15" stroke="#C8102E" stroke-width="2"/><path d="M10,0 V15 M0,7.5 H20" stroke="#fff" stroke-width="5"/><path d="M10,0 V15 M0,7.5 H20" stroke="#C8102E" stroke-width="3"/></svg> English</a><a href="contact.html" class="active"><svg width="20" height="15" class="langFlag" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="15" fill="#006A4E"/><circle cx="9" cy="7.5" r="4.5" fill="#F42A41"/></svg> বাংলা</a></div>
@@ -73,7 +73,7 @@
       </div>
       <div class="card mt-20-center" >
         <p class="fs-14-muted-mb16">অথবা সরাসরি ট্রায়াল বুক করুন:</p>
-        <button class="btn primary lg w-full-center" onclick="document.getElementById('openModal').click()" >ফ্রি ট্রায়াল বুক করুন</button>
+        <button class="btn primary lg w-full-center" onclick="location.href='demo.html'" >ফ্রি ট্রায়াল বুক করুন</button>
       </div>
     </div>
   </div>
@@ -106,7 +106,7 @@ document.getElementById("contactForm")?.addEventListener("submit", function(e) {
 });
   const close=()=>{mn.classList.remove("show");document.body.style.overflow="";document.getElementById("langDrop")?.classList.remove("open");};
   mn.querySelectorAll("a").forEach(a=>a.addEventListener("click",close));
-  document.addEventListener("keydown",e=>{if(e.key==="Escape"){close();cm();}});
+  document.addEventListener("keydown",e=>{if(e.key==="Escape"){close();}});
   document.addEventListener("click",e=>{if(!mn.contains(e.target)&&!hb.contains(e.target)&&mn.classList.contains("show"))close();});
 })();
 const ld=document.getElementById("langDrop");
@@ -114,4 +114,6 @@ document.getElementById("langBtn")?.addEventListener("click",e=>{e.stopPropagati
 document.addEventListener("click",()=>ld?.classList.remove("open"));
 document.querySelectorAll(".menu a").forEach(a=>{if(a.getAttribute("href")===location.pathname.split("/").pop())a.classList.add("active");});
 document.querySelectorAll(".footerYear").forEach(el=>el.textContent=new Date().getFullYear());
-</script></body></html>
+</script>
+<script src="../js/forms.js"></script>
+</body></html>
