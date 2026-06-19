@@ -1938,6 +1938,32 @@
   background: linear-gradient(135deg, #7c2d12, #c2410c);
 }
 
+.bg-gold-grad {
+  background: linear-gradient(135deg, #7a5c12, #b8860b);
+}
+
+.bg-rose-grad {
+  background: linear-gradient(135deg, #6d2436, #a83a54);
+}
+
+/* Learning Management System promo — two columns on desktop, stacked on mobile */
+.lmsGrid {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .lmsGrid {
+    grid-template-columns: 1fr;
+    gap: 54px;
+    max-width: 460px;
+  }
+}
+
 .bg-orange {
   background: #c2410c;
 }
