@@ -2198,3 +2198,21 @@
   color: var(--muted);
   margin-bottom: 28px;
 }
+
+/* ════════════════════════════════════════════
+   RESPONSIVE OVERRIDES
+   These live in style.css because it loads after min.css, so for
+   selectors whose base rule is defined here (directorCard, valueBand)
+   the responsive rules must also be here to win the cascade.
+   ════════════════════════════════════════════ */
+
+/* About page — stack the director card and ease the values band on tablets */
+@media (max-width: 900px) {
+  .directorCard {
+    grid-template-columns: 1fr;
+  }
+
+  .valueBand {
+    grid-template-columns: 1fr 1fr;
+  }
+}

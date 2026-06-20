@@ -1798,3 +1798,16 @@ footer {
     padding: 12px 8px;
   }
 }
+
+/* ── Footer: keep the Pages / Courses link columns two-up on phones ── */
+@media (max-width: 600px) {
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 26px 20px;
+  }
+
+  .footerBrand {
+    grid-column: 1 / -1;
+    max-width: none;
+  }
+}
