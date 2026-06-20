@@ -163,7 +163,7 @@ function tqaInitTrialForms() {
 function tqaBuildEnrollModal() {
   if (document.getElementById("tqaEnrollBackdrop")) return;
   const bn = tqaIsBn();
-  const courses = ["Noorani Qaida", "Quran Reading", "Quran with Tajweed", "Deen & Adab", "Hifz Support"];
+  const courses = ["Easy Noorani Qaida", "Noorani Qaida", "Pre-Quran Reading", "Quran Reading", "Quran with Tajweed", "Hifz Support"];
   const countries = ["United States (USA)", "Canada", "United Kingdom (UK)", "Germany", "France", "Netherlands", "Australia", "Saudi Arabia", "UAE", "Other"];
 
   const bankRows = PAY_INFO.bank.lines.map(([k, v]) =>
