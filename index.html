@@ -862,14 +862,17 @@
   </section>
 
   <!-- ═══════════════ TESTIMONIALS ═══════════════ -->
-  <section class="section">
+  <section class="section" id="reviews">
     <div class="wrap">
       <div class="sectionTitle">
         <div class="sectionLabel">Parent Reviews</div>
         <h2>What Families Say</h2>
         <p>Alhamdulillah — feedback from parents whose children are learning with us.</p>
       </div>
-      <div class="grid3">
+      <!-- Parent reviews slider — to add a review, copy one .testimonialCard block below and edit the text, name, country and flag -->
+      <div class="reviewSlider">
+        <button class="reviewNav prev" aria-label="Previous review">‹</button>
+        <div class="reviewTrack" id="reviewTrack">
         <div class="testimonialCard">
           <div class="stars">★★★★★</div>
           <p>"My daughter started from zero and within months she is reading Surah Al-Fatiha correctly with proper
@@ -933,9 +936,103 @@
             </div>
           </div>
         </div>
+        <div class="testimonialCard">
+          <div class="stars">★★★★★</div>
+          <p>"For my daughter I wanted a female teacher — and her Ustadha is a Hafiza &amp; Alima, maa shaa Allah. She
+            feels completely comfortable and is now memorising Surahs with their meaning."</p>
+          <div class="author">
+            <div class="avatar">M</div>
+            <div>
+              <div class="authorName">Sister Maryam</div>
+              <div class="authorSub"><svg class="flagSvg" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="5" fill="#000"/><rect width="20" height="5" y="5" fill="#DD0000"/><rect width="20" height="5" y="10" fill="#FFCE00"/></svg> Germany</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonialCard">
+          <div class="stars">★★★★★</div>
+          <p>"What won me over is the management portal — I can check attendance, how much of the syllabus is covered and
+            even my son's Akhlaq marks, anytime. Real transparency, maa shaa Allah."</p>
+          <div class="author">
+            <div class="avatar">Y</div>
+            <div>
+              <div class="authorName">Brother Yusuf</div>
+              <div class="authorSub"><svg class="flagSvg" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="15" fill="#fff"/><rect width="6.67" height="15" fill="#0055A4"/><rect x="13.33" width="6.67" height="15" fill="#EF4135"/></svg> France</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonialCard">
+          <div class="stars">★★★★★</div>
+          <p>"The teachers explain in clear Bangla and switch to English whenever the children need it — so my kids
+            understand every single lesson. Living abroad, that mattered to us."</p>
+          <div class="author">
+            <div class="avatar">K</div>
+            <div>
+              <div class="authorName">Sister Khadijah</div>
+              <div class="authorSub"><svg class="flagSvg" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="5" fill="#AE1C28"/><rect y="5" width="20" height="5" fill="#fff"/><rect y="10" width="20" height="5" fill="#21468B"/></svg> Netherlands</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonialCard">
+          <div class="stars">★★★★★</div>
+          <p>"It is far more than recitation — they teach Duas, Adab and Akhlaq too. Alhamdulillah, my son's manners at
+            home have genuinely improved since he joined."</p>
+          <div class="author">
+            <div class="avatar">B</div>
+            <div>
+              <div class="authorName">Brother Bilal</div>
+              <div class="authorSub"><svg class="flagSvg" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="15" fill="#006AA7"/><rect x="6" width="2.2" height="15" fill="#FECC00"/><rect y="6.4" width="20" height="2.2" fill="#FECC00"/></svg> Sweden</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonialCard">
+          <div class="stars">★★★★★</div>
+          <p>"Evening slots fit our timezone perfectly, and the daily lesson plan with task feedback keeps me involved
+            every day. Booking the free trial was the best decision."</p>
+          <div class="author">
+            <div class="avatar">R</div>
+            <div>
+              <div class="authorName">Sister Ruqayyah</div>
+              <div class="authorSub"><svg class="flagSvg" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg"><rect width="6.67" height="15" fill="#000"/><rect x="6.67" width="6.67" height="15" fill="#FDDA24"/><rect x="13.33" width="6.67" height="15" fill="#EF3340"/></svg> Belgium</div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <button class="reviewNav next" aria-label="Next review">›</button>
       </div>
+      <div class="reviewDots" id="reviewDots"></div>
     </div>
   </section>
+
+  <script>
+    (function () {
+      var track = document.getElementById('reviewTrack');
+      if (!track) return;
+      var slider = track.closest('.reviewSlider');
+      var prev = slider.querySelector('.reviewNav.prev');
+      var next = slider.querySelector('.reviewNav.next');
+      var dotsWrap = document.getElementById('reviewDots');
+      var cards = Array.prototype.slice.call(track.querySelectorAll('.testimonialCard'));
+      cards.forEach(function (c, i) {
+        var d = document.createElement('button');
+        d.className = 'reviewDot' + (i === 0 ? ' active' : '');
+        d.setAttribute('aria-label', 'Go to review ' + (i + 1));
+        d.addEventListener('click', function () { go(i); });
+        dotsWrap.appendChild(d);
+      });
+      var dots = Array.prototype.slice.call(dotsWrap.children);
+      function step() { var c = track.querySelector('.testimonialCard'); return c ? c.getBoundingClientRect().width + 20 : track.clientWidth; }
+      function cur() { return Math.round(track.scrollLeft / step()); }
+      function go(i) { i = Math.max(0, Math.min(cards.length - 1, i)); track.scrollTo({ left: i * step(), behavior: 'smooth' }); }
+      function atEnd() { return track.scrollLeft + track.clientWidth >= track.scrollWidth - 5; }
+      function sync() { var c = cur(); dots.forEach(function (d, i) { d.classList.toggle('active', i === c); }); }
+      function nextSlide() { if (atEnd()) go(0); else go(cur() + 1); }
+      track.addEventListener('scroll', function () { window.requestAnimationFrame(sync); });
+      if (prev) prev.addEventListener('click', function () { go(cur() - 1); });
+      if (next) next.addEventListener('click', nextSlide);
+      var timer = setInterval(nextSlide, 5500);
+      slider.addEventListener('mouseenter', function () { clearInterval(timer); });
+    })();
+  </script>
 
   <!-- ═══════════════ CTA BAND ═══════════════ -->
   <section class="section section-pb72">

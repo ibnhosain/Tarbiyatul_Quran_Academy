@@ -2233,3 +2233,91 @@
 .arabic-note-mb0 {
   font-family: 'Amiri', 'Scheherazade New', serif;
 }
+
+/* ── Parent reviews slider ── */
+.reviewSlider {
+  position: relative;
+}
+
+.reviewTrack {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 8px 2px 16px;
+  scrollbar-width: none;
+}
+
+.reviewTrack::-webkit-scrollbar {
+  display: none;
+}
+
+.reviewTrack > .testimonialCard {
+  flex: 0 0 360px;
+  max-width: 86vw;
+  scroll-snap-align: center;
+}
+
+.reviewNav {
+  position: absolute;
+  top: 42%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--emerald);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  display: grid;
+  place-items: center;
+  transition: background .2s, color .2s;
+}
+
+.reviewNav.prev {
+  left: -10px;
+}
+
+.reviewNav.next {
+  right: -10px;
+}
+
+.reviewNav:hover {
+  background: var(--emerald);
+  color: #fff;
+}
+
+.reviewDots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.reviewDot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(26, 92, 58, .25);
+  cursor: pointer;
+  transition: width .25s, background .25s;
+}
+
+.reviewDot.active {
+  background: var(--emerald);
+  width: 26px;
+  border-radius: 50px;
+}
+
+@media (max-width: 600px) {
+  .reviewNav {
+    display: none;
+  }
+}
