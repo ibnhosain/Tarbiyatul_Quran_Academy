@@ -2243,7 +2243,7 @@
   display: flex;
   gap: 20px;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x proximity;
   scroll-behavior: smooth;
   padding: 8px 2px 16px;
   scrollbar-width: none;
@@ -2253,10 +2253,20 @@
   display: none;
 }
 
+.reviewTrack {
+  scroll-padding-left: 0;
+}
+
 .reviewTrack > .testimonialCard {
   flex: 0 0 360px;
   max-width: 86vw;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
+}
+
+@media (max-width: 600px) {
+  .reviewTrack > .testimonialCard {
+    flex-basis: 86vw;
+  }
 }
 
 .reviewNav {

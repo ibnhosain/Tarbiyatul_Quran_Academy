@@ -1012,25 +1012,38 @@
       var next = slider.querySelector('.reviewNav.next');
       var dotsWrap = document.getElementById('reviewDots');
       var cards = Array.prototype.slice.call(track.querySelectorAll('.testimonialCard'));
+      if (!cards.length) return;
+      var idx = 0, timer = null, st;
       cards.forEach(function (c, i) {
         var d = document.createElement('button');
         d.className = 'reviewDot' + (i === 0 ? ' active' : '');
         d.setAttribute('aria-label', 'Go to review ' + (i + 1));
-        d.addEventListener('click', function () { go(i); });
+        d.addEventListener('click', function () { stop(); go(i); start(); });
         dotsWrap.appendChild(d);
       });
       var dots = Array.prototype.slice.call(dotsWrap.children);
-      function step() { var c = track.querySelector('.testimonialCard'); return c ? c.getBoundingClientRect().width + 20 : track.clientWidth; }
-      function cur() { return Math.round(track.scrollLeft / step()); }
-      function go(i) { i = Math.max(0, Math.min(cards.length - 1, i)); track.scrollTo({ left: i * step(), behavior: 'smooth' }); }
-      function atEnd() { return track.scrollLeft + track.clientWidth >= track.scrollWidth - 5; }
-      function sync() { var c = cur(); dots.forEach(function (d, i) { d.classList.toggle('active', i === c); }); }
-      function nextSlide() { if (atEnd()) go(0); else go(cur() + 1); }
-      track.addEventListener('scroll', function () { window.requestAnimationFrame(sync); });
-      if (prev) prev.addEventListener('click', function () { go(cur() - 1); });
-      if (next) next.addEventListener('click', nextSlide);
-      var timer = setInterval(nextSlide, 5500);
-      slider.addEventListener('mouseenter', function () { clearInterval(timer); });
+      function setActive(i) { dots.forEach(function (d, k) { d.classList.toggle('active', k === i); }); }
+      function go(i) {
+        idx = (i + cards.length) % cards.length;
+        track.scrollTo({ left: cards[idx].offsetLeft - cards[0].offsetLeft, behavior: 'smooth' });
+        setActive(idx);
+      }
+      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+      function start() { stop(); timer = setInterval(function () { go(idx + 1); }, 4000); }
+      if (prev) prev.addEventListener('click', function () { stop(); go(idx - 1); start(); });
+      if (next) next.addEventListener('click', function () { stop(); go(idx + 1); start(); });
+      track.addEventListener('scroll', function () {
+        clearTimeout(st);
+        st = setTimeout(function () {
+          var pos = track.scrollLeft + cards[0].offsetLeft, best = 0, bd = Infinity;
+          cards.forEach(function (c, k) { var d = Math.abs(c.offsetLeft - pos); if (d < bd) { bd = d; best = k; } });
+          idx = best; setActive(idx);
+        }, 130);
+      });
+      slider.addEventListener('mouseenter', stop);
+      slider.addEventListener('mouseleave', start);
+      window.addEventListener('resize', function () { go(idx); });
+      start();
     })();
   </script>
 
