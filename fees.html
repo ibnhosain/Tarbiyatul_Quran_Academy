@@ -67,10 +67,67 @@
         <div><span class="brandName">Tarbiyatul Quran Academy</span><small class="brandTag">Online Quran Classes ·
             Worldwide</small></div>
       </a>
-      <nav class="menu" id="menu"><a href="index.html">Home</a><a href="about.html">About</a><a
-          href="courses.html">Courses</a><a href="syllabus.html">Syllabus</a><a href="books.html">Books</a><a
-          href="demo.html">Demo Class</a><a href="fees.html">Fees</a><a href="contact.html">Contact</a><button
-          class="btn btnWa" data-wa>WhatsApp</button><button class="btn primary" data-open-modal>Get Admission</button>
+      <nav class="menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="syllabus.html">Syllabus</a>
+        <a href="books.html">Books</a>
+        <a href="demo.html">Demo Class</a>
+        <a href="fees.html">Fees</a>
+        <a href="contact.html">Contact</a>
+        <button class="btn btnWa ml-4" data-wa aria-label="Chat on WhatsApp">
+          <span class="btnIcon">
+            <svg viewBox="0 0 32 32" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path fill="currentColor"
+                d="M19.11 17.29c-.25-.12-1.47-.72-1.7-.8-.23-.08-.4-.12-.57.12-.17.25-.65.8-.8.96-.15.17-.3.19-.55.06-.25-.12-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.76-.15-.25-.02-.39.11-.52.11-.11.25-.3.37-.45.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.57-1.38-.78-1.9-.2-.48-.41-.42-.57-.43h-.49c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.45 1.02 2.62c.12.17 1.77 2.7 4.28 3.79.6.26 1.07.41 1.43.52.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.17.21-.57.21-1.06.15-1.17-.06-.11-.23-.17-.48-.3z" />
+              <path fill="currentColor"
+                d="M26.69 5.31C23.88 2.5 20.14.95 16.17.95 8.3.95 1.9 7.35 1.9 15.22c0 2.51.65 4.96 1.89 7.13L1.8 31.05l8.9-1.96c2.06 1.12 4.38 1.71 6.74 1.71h.01c7.87 0 14.27-6.4 14.27-14.27 0-3.97-1.55-7.71-4.36-10.22zM16.17 28.4h-.01c-2.12 0-4.2-.57-6.01-1.64l-.43-.26-5.28 1.16 1.13-5.15-.28-.53c-1.19-1.9-1.82-4.1-1.82-6.36 0-6.55 5.33-11.88 11.9-11.88 3.18 0 6.17 1.24 8.41 3.48 2.24 2.24 3.48 5.23 3.48 8.41 0 6.55-5.33 11.87-11.9 11.87z" />
+            </svg>
+          </span>
+          WhatsApp
+        </button>
+        <button class="btn primary ml-4" data-enroll-modal>Get Admission</button>
+        <!-- Language switcher -->
+        <div class="langDrop" id="langDrop">
+          <button class="langBtn" id="langBtn" aria-label="Select language">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path
+                d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+            <span id="langLabel">EN</span>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div class="langMenu" id="langMenu">
+            <a href="fees.html" class="active"><svg width="20" height="15" class="langFlag" viewBox="0 0 20 15"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect width="20" height="15" fill="#012169" />
+                <path d="M0,0 L20,15 M20,0 L0,15" stroke="#fff" stroke-width="3" />
+                <path d="M0,0 L20,15 M20,0 L0,15" stroke="#C8102E" stroke-width="2" />
+                <path d="M10,0 V15 M0,7.5 H20" stroke="#fff" stroke-width="5" />
+                <path d="M10,0 V15 M0,7.5 H20" stroke="#C8102E" stroke-width="3" />
+              </svg> English</a>
+            <a href="bn/fees.html"><svg width="20" height="15" class="langFlag" viewBox="0 0 20 15"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect width="20" height="15" fill="#006A4E" />
+                <circle cx="9" cy="7.5" r="4.5" fill="#F42A41" />
+              </svg> বাংলা</a>
+          </div>
+        </div>
+        <!-- Login -->
+        <a href="login.html" class="loginBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <circle cx="12" cy="8" r="4" />
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+          </svg>
+          Login
+        </a>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Open menu"><svg width="20" height="20" viewBox="0 0 20 20"
           fill="none" xmlns="http://www.w3.org/2000/svg">
