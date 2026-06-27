@@ -2331,3 +2331,11 @@
     display: none;
   }
 }
+
+/* ── Footer social icons ── */
+.footerSocial{display:flex;align-items:center;justify-content:center;gap:11px;flex-wrap:wrap;padding:20px 0 2px;margin-top:6px;border-top:1px solid rgba(255,255,255,.1)}
+.footerSocialLabel{color:rgba(255,255,255,.72);font-size:13.5px;font-weight:700;margin-right:3px}
+.socialIcon{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.1);color:#fff;transition:transform .15s ease,background .15s ease,color .15s ease}
+.socialIcon:hover{background:var(--gold,#d8a93f);color:#0f3424;transform:translateY(-2px)}
+.socialIcon svg{width:18px;height:18px;fill:currentColor}
+@media (max-width:600px){.footerSocial{gap:9px}.socialIcon{width:36px;height:36px}}
