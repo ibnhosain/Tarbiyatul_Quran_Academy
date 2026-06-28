@@ -2345,3 +2345,9 @@
 .socialIcon[data-social="linkedin"]{background:#0A66C2}
 .socialIcon[data-social="whatsapp"]{background:#25D366}
 @media (max-width:600px){.footerSocial{gap:8px}.socialIcon{width:33px;height:33px}}
+
+
+/* ── Trust strip (below hero) ── */
+.trustStrip{background:rgba(26,92,58,.07);border-top:1px solid rgba(26,92,58,.12);border-bottom:1px solid rgba(26,92,58,.12);text-align:center;padding:13px 16px}
+.trustStrip p{margin:0;font-size:14px;font-weight:700;color:var(--emerald,#1a5c3a);letter-spacing:.2px}
+@media (max-width:600px){.trustStrip p{font-size:12.5px}}

@@ -145,6 +145,7 @@ function tqaInitTrialForms() {
           message: fd.get("message") || "",
         });
         tqaShowSuccess(form, tqaTrialSuccess());
+        window.tqaTrack && tqaTrack("trial_booked");
       } catch (err) {
         const box = document.createElement("div");
         box.className = "tqa-err"; box.innerHTML = tqaErrorBox();
@@ -264,6 +265,7 @@ function tqaBuildEnrollModal() {
         message: fd.get("message") || "",
       });
       tqaShowSuccess(form, tqaEnrollSuccess(fd.get("name")));
+      window.tqaTrack && tqaTrack("enroll_submitted", { value: ENROLL_FEE_USD, currency: "USD" });
     } catch (err) {
       const box = document.createElement("div");
       box.className = "tqa-err"; box.innerHTML = tqaErrorBox();
@@ -321,6 +323,7 @@ function tqaInitContactForm() {
           <button class="btn primary" data-tqa-close style="min-width:140px;">${bn ? "ঠিক আছে" : "Close"}</button>
         </div>`;
       tqaShowSuccess(form, html);
+      window.tqaTrack && tqaTrack("contact_sent");
     } catch (err) {
       const box = document.createElement("div");
       box.className = "tqa-err"; box.innerHTML = tqaErrorBox();
