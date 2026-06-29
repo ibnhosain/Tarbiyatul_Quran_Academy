@@ -5,7 +5,7 @@
    আইডি না বসালে ট্র্যাকিং নিজে থেকেই বন্ধ থাকবে (সাইট ভাঙবে না)।
    ============================================================ */
 
-const GA4_ID        = "G-XXXXXXXXXX";    // ← এখানে GA4 Measurement ID বসান
+const GA4_ID        = "G-EVG880GWPV";    // ← GA4 Measurement ID (Tarbiyatul Quran Academy)
 const META_PIXEL_ID = "YOUR_PIXEL_ID";   // ← এখানে Meta Pixel ID বসান
 
 /* ---------- Google Analytics 4 ---------- */
