@@ -6,7 +6,7 @@
    ============================================================ */
 
 const GA4_ID        = "G-EVG880GWPV";    // ← GA4 Measurement ID (Tarbiyatul Quran Academy)
-const META_PIXEL_ID = "YOUR_PIXEL_ID";   // ← এখানে Meta Pixel ID বসান
+const META_PIXEL_ID = "1340096414749261";   // ← Meta Pixel ID (Tarbiyatul Quran Academy)
 
 /* ---------- Google Analytics 4 ---------- */
 (function () {
