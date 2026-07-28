@@ -286,6 +286,16 @@ function tqaInitEnroll() {
       if (bd) { bd.classList.add("show"); bd.setAttribute("aria-hidden", "false"); document.body.style.overflow = "hidden"; }
     });
   });
+
+  /* ডিরেক্ট লিংক: /?enroll (বা #enroll / #admission) খুললে ভর্তি ফরম নিজে থেকেই খোলে —
+     এই লিংকটা অভিভাবকদের সরাসরি পাঠানো যায়। */
+  try {
+    const params = new URLSearchParams(window.location.search);
+    if (params.has("enroll") || location.hash === "#enroll" || location.hash === "#admission") {
+      const bd = document.getElementById("tqaEnrollBackdrop");
+      if (bd) { bd.classList.add("show"); bd.setAttribute("aria-hidden", "false"); document.body.style.overflow = "hidden"; }
+    }
+  } catch (e) {}
 }
 
 /* ════════════════════════════════════════════════
