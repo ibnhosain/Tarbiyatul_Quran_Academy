@@ -344,8 +344,20 @@ function tqaInitContactForm() {
   });
 }
 
+/* ডিরেক্ট লিংক: /?trial (বা #trial) খুললে ফ্রি ট্রায়াল ফরম নিজে থেকেই খোলে —
+   অভিভাবকদের সরাসরি পাঠানো যায়। */
+function tqaAutoOpenTrial() {
+  try {
+    const params = new URLSearchParams(window.location.search);
+    if (params.has("trial") || location.hash === "#trial") {
+      const bd = document.getElementById("backdrop");
+      if (bd) { bd.classList.add("show"); bd.setAttribute("aria-hidden", "false"); document.body.style.overflow = "hidden"; }
+    }
+  } catch (e) {}
+}
+
 /* ── INIT ── inline handler গুলোর পরে চালাতে সামান্য বিলম্ব ── */
-function tqaInitAll() { tqaInitTrialForms(); tqaInitEnroll(); tqaInitContactForm(); }
+function tqaInitAll() { tqaInitTrialForms(); tqaInitEnroll(); tqaInitContactForm(); tqaAutoOpenTrial(); }
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", () => setTimeout(tqaInitAll, 0));
 } else {
