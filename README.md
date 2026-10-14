@@ -17,7 +17,7 @@ A fully static, multi-page website for **Tarbiyatul Quran Academy** — an onlin
 | `syllabus.html` | Syllabus | Tabbed lesson-by-lesson breakdown |
 | `books.html` | Books | Recommended texts and digital resources |
 | `demo.html` | Demo Class | YouTube demo + free trial booking |
-| `fees.html` | Fees | Pricing table in USD, GBP, EUR, CAD, BDT |
+| `fees.html` | Fees | Pricing table — fixed in USD, with GBP, EUR, CAD, AUD, AED, SAR equivalents (live via js/fx.js) |
 | `contact.html` | Contact | WhatsApp, email, enquiry form |
 | `404.html` | 404 | Custom not-found page for GitHub Pages |
 
