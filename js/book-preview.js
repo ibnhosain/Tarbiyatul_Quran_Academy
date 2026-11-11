@@ -64,3 +64,40 @@
     const w = document.querySelector("[data-wa]"); if (w) w.click();
   }));
 })();
+
+/* Course buttons at the top of the Books page: show only the books of the chosen course
+   (book cards carry data-courses; "all" = used in every course; the gallery carries data-only). */
+(function () {
+  const bar = document.querySelector(".ctBar");
+  if (!bar) return;
+  const wrap = bar.closest(".ctWrap"), now = wrap.querySelector(".ctNow"), soon = wrap.querySelector(".ctSoon");
+  const btns = [...bar.querySelectorAll(".ctBtn")];
+  const cards = [...document.querySelectorAll(".bookCard[data-courses]")];
+  const groups = [...new Set(cards.map(c => c.parentElement))];
+  const only = [...document.querySelectorAll("[data-only]")];
+
+  function apply(course, scroll) {
+    if (!btns.some(b => b.dataset.course === course)) course = "all";
+    const all = course === "all";
+    btns.forEach(b => b.setAttribute("aria-pressed", String(b.dataset.course === course)));
+    cards.forEach(c => { const cs = c.dataset.courses.split(" "); c.hidden = !(all || cs.includes("all") || cs.includes(course)); });
+    groups.forEach(g => {
+      const empty = ![...g.querySelectorAll(".bookCard")].some(c => !c.hidden);
+      g.hidden = empty;
+      const h = g.previousElementSibling; if (h && h.tagName === "H2") h.hidden = empty;
+    });
+    let own = false;
+    only.forEach(el => { const on = all || el.dataset.only === course; el.hidden = !on; if (on && !all) own = true; });
+    now.hidden = all; now.querySelector("strong").textContent = all ? "" : btns.find(b => b.dataset.course === course).textContent;
+    soon.hidden = all || own;
+    if (scroll) wrap.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  btns.forEach(b => b.addEventListener("click", e => {
+    e.preventDefault();
+    history.replaceState(null, "", "#course-" + b.dataset.course);
+    apply(b.dataset.course, true);
+  }));
+  const m = location.hash.match(/^#course-([a-z-]+)$/);
+  if (m) apply(m[1], true);
+})();
