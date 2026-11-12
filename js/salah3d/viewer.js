@@ -60,7 +60,7 @@
     scene = TQA_SCENE.stage(st.key); scene.add(g.scene);
     const wudu = st.key.startsWith("wudu");
     g.scene.traverse(o => {
-      if (o.name.startsWith("kufi") || o.name.startsWith("hair_cap")) o.visible = !wudu;
+      if (o.name.startsWith("kufi") || o.name.startsWith("kurta_sleeves") || o.name.startsWith("hair_cap")) o.visible = !wudu;
       if (o.name.startsWith("hair_full")) o.visible = wudu;
     });
     if (!mixer || mixer.getRoot() !== g.scene) mixer = new THREE.AnimationMixer(g.scene);
